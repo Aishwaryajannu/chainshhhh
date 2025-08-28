@@ -8071,15 +8071,14 @@ initCustomForm();
 
         Object.assign(overlay.style, overlayStyles);
 
-       const video = document.createElement('video');
-video.id = 'fullscreen-video';
-video.src = './assets/Chainshields-What-We-Do.mp4';
-video.controls = true;
-video.preload = 'none'; // Changed from 'auto' to 'none' for lazy loading
-video.controlsList = 'nodownload';
-video.playsInline = true;
-video.muted = false;
-video.loading = 'lazy'; // Add lazy loading attribute
+        const video = document.createElement('video');
+        video.id = 'fullscreen-video';
+        video.src = './assets/Chainshields-What-We-Do.mp4';
+        video.controls = true;
+        video.preload = 'auto';
+        video.controlsList = 'nodownload';
+        video.playsInline = true;
+        video.muted = false;
         // Calculate initial position and size based on button
         const initialSize = Math.min(playButtonRect.width, playButtonRect.height);
         const initialLeft = playButtonRect.left + (playButtonRect.width / 2) - (initialSize / 2);
